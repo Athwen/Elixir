@@ -16,9 +16,9 @@ final GoRouter _router = GoRouter(
       },
     ),
     GoRoute(
-      path: '/Landing',
+      path: '/landing',
       builder: (BuildContext context, GoRouterState state) {
-        return const Landing();
+        return Landing(code: state.queryParameters['code']);
       },
     ),
   ],

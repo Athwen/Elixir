@@ -30,7 +30,31 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+                
+                <data android:scheme="http" android:host="ec2-3-144-70-69.us-east-2.compute.amazonaws.com:3000" android:pathPrefix="/"/>
+                <data android:scheme="elixir" android:host="com.example.elixir" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.example.elixir.DeeplinkActivity"
+            android:exported="true" >
+            
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
+                <data android:scheme="elixir" android:host="com.example.elixir" />
+            </intent-filter>
+            
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                
                 <data android:scheme="http" android:host="ec2-3-144-70-69.us-east-2.compute.amazonaws.com:3000" />
+                
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.

@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
@@ -21,4 +20,10 @@ String generateCodeChallenge(String codeVerifier) {
   Digest digest = sha256.convert(bytes);
 
   return base64Encode(digest.bytes);
+}
+
+String? encodeQueryParameters(Map<String, String> params) {
+  return params.entries
+      .map((MapEntry<String, String> e) => '${e.key}=${e.value}')
+      .join('&');
 }

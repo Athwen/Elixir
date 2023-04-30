@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Landing extends StatefulWidget {
-  const Landing({super.key});
+  String? code;
+  Landing({super.key, required this.code});
 
   @override
   State<Landing> createState() => _LandingState();
@@ -10,8 +11,11 @@ class Landing extends StatefulWidget {
 class _LandingState extends State<Landing> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    return Scaffold(
+      body: Container(
+        color: Colors.red,
+        child: Text(widget.code!),
+      ),
     );
   }
 }
