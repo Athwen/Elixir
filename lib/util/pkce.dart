@@ -22,7 +22,7 @@ String generateCodeChallenge(String codeVerifier) {
   return base64Encode(digest.bytes);
 }
 
-String? encodeQueryParameters(Map<String, String> params) {
+String encodeQueryParameters(Map<String, String> params) {
   return params.entries
       .map((MapEntry<String, String> e) => '${e.key}=${e.value}')
       .join('&');

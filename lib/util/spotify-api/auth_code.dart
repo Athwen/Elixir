@@ -1,12 +1,16 @@
+import 'package:elixir/util/spotify-api/spotify_app_config.dart';
+
 import '../pkce.dart';
 
 String genSpotifyAuthURL() {
-  const clientID = "b0b80ff4663045549b971b4c1a49250b";
-  const redirectUri =
-      "http://ec2-3-144-70-69.us-east-2.compute.amazonaws.com:3000";
+  const clientID = SpotifyConfig.clientID;
+  const redirectUri = SpotifyConfig.redirectURI;
 
   String state = generateRandomString(16);
   String codeVerifier = generateRandomString(128);
+
+  SpotifyConfig.setCodeVerififer(codeVerifier);
+
   String scope = "user-read-private user-read-email";
   String codeChallenge = generateCodeChallenge(codeVerifier);
 
@@ -20,7 +24,7 @@ String genSpotifyAuthURL() {
       "code_challenge_method": "S256",
       "code_challenge": codeChallenge,
     },
-  )!}";
+  )}";
 
   return url;
 }
