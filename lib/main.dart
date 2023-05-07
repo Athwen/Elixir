@@ -18,7 +18,7 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/landing',
       builder: (BuildContext context, GoRouterState state) {
-        return Landing(code: state.queryParameters['code']);
+        return Landing(authCode: state.queryParameters['code']);
       },
     ),
   ],

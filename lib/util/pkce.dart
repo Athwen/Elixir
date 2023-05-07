@@ -19,10 +19,13 @@ String generateCodeChallenge(String codeVerifier) {
   List<int> bytes = utf8.encode(codeVerifier);
   Digest digest = sha256.convert(bytes);
 
-  return base64Encode(digest.bytes);
+  String retVal = base64Encode(digest.bytes);
+
+  // return base64 encode
+  return retVal.replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
 }
 
-String encodeQueryParameters(Map<String, String> params) {
+String joinParameters(Map<String, String> params) {
   return params.entries
       .map((MapEntry<String, String> e) => '${e.key}=${e.value}')
       .join('&');

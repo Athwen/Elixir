@@ -14,7 +14,10 @@ String genSpotifyAuthURL() {
   String scope = "user-read-private user-read-email";
   String codeChallenge = generateCodeChallenge(codeVerifier);
 
-  String url = "https://accounts.spotify.com/authorize?${encodeQueryParameters(
+  print(codeVerifier);
+  print(codeChallenge);
+
+  String url = "https://accounts.spotify.com/authorize?${joinParameters(
     <String, String>{
       "response_type": "code",
       "client_id": clientID,
