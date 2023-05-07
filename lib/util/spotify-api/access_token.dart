@@ -13,6 +13,8 @@ Future<String> getToken(String authCode) async {
     "code_verifier": SpotifyConfig.getCodeVerififer(),
   }));
 
+  print(body);
+
   http.Response res = await http.post(
     Uri.parse("https://accounts.spotify.com/api/token"),
     headers: {"Content-Type": "application/x-www-form-urlencoded"},

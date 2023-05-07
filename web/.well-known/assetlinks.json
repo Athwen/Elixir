@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.example.elixir",
+            "sha256_cert_fingerprints": [
+                "EB:5C:9E:83:88:8F:2C:99:A6:F2:7F:62:77:0F:9D:5F:67:C5:E8:CB:7D:AC:58:F8:00:06:2C:64:36:F1:84:8A"
+            ]
+        }
+    }
+]

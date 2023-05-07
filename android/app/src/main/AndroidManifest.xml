@@ -31,12 +31,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 
-                <data android:scheme="http" android:host="ec2-3-144-70-69.us-east-2.compute.amazonaws.com:3000" android:pathPrefix="/"/>
-                <data android:scheme="elixir" android:host="com.example.elixir" />
+                <!-- <data android:scheme="https" android:host="elixir-6c470.web.app" android:pathPrefix="/"/> -->
+                <!-- <data android:scheme="elixir" android:host="com.example.elixir" /> -->
+
+                <data android:scheme="https" android:host="elixir-6c470.web.app" />
+                <data android:scheme="http" />
             </intent-filter>
+            
         </activity>
 
-        <activity
+        <!-- <activity
             android:name="com.example.elixir.DeeplinkActivity"
             android:exported="true" >
             
@@ -53,10 +57,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 
-                <data android:scheme="http" android:host="ec2-3-144-70-69.us-east-2.compute.amazonaws.com:3000" />
+                <data android:scheme="https" android:host="elixir-6c470.web.app" />
                 
             </intent-filter>
-        </activity>
+        </activity> -->
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
