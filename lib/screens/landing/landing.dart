@@ -1,4 +1,3 @@
-
 import 'package:elixir/util/responsive/responsive.dart';
 import 'package:elixir/util/spotify-api/access_token.dart';
 import 'package:elixir/util/spotify-api/spotify_app_config.dart';

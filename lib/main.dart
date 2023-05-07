@@ -1,5 +1,5 @@
-import 'package:elixir/screens/landing.dart';
-import 'package:elixir/screens/login.dart';
+import 'package:elixir/screens/landing/landing.dart';
+import 'package:elixir/screens/login/login.dart';
 import 'package:elixir/screens/redirect.dart';
 import 'package:elixir/util/spotify-api/spotify_app_config.dart';
 import 'package:flutter/material.dart';

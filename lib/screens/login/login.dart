@@ -2,7 +2,7 @@ import 'package:elixir/util/pkce.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../util/spotify-api/auth_code.dart';
+import '../../util/spotify-api/auth_code.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
